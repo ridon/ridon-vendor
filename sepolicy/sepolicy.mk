@@ -4,7 +4,7 @@
 #
 
 BOARD_SEPOLICY_DIRS := \
-    vendor/replicant/sepolicy
+    vendor/ridon/sepolicy
 
 BOARD_SEPOLICY_UNION := \
     mac_permissions.xml

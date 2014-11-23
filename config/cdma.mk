@@ -1,3 +1,3 @@
 # CDMA APN list
 PRODUCT_COPY_FILES += \
-    vendor/replicant/prebuilt/common/etc/apns-conf-cdma.xml:system/etc/apns-conf.xml
+    vendor/ridon/prebuilt/common/etc/apns-conf-cdma.xml:system/etc/apns-conf.xml

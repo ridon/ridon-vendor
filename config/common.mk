@@ -1,13 +1,13 @@
-PRODUCT_BRAND ?= replicant
+PRODUCT_BRAND ?= ridon
 
--include vendor/replicant-security/security.mk
+-include vendor/ridon-security/security.mk
 
 SUPERUSER_EMBEDDED := true
 SUPERUSER_PACKAGE_PREFIX := com.android.settings.cyanogenmod.superuser
 
 ifneq ($(TARGET_BOOTANIMATION_NAME),)
     PRODUCT_COPY_FILES += \
-        vendor/replicant/prebuilt/common/bootanimation/$(TARGET_BOOTANIMATION_NAME).zip:system/media/bootanimation.zip
+        vendor/ridon/prebuilt/common/bootanimation/$(TARGET_BOOTANIMATION_NAME).zip:system/media/bootanimation.zip
 endif
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
@@ -31,47 +31,47 @@ endif
 
 # Copy over the changelog to the device
 PRODUCT_COPY_FILES += \
-    vendor/replicant/CHANGELOG.mkdn:system/etc/CHANGELOG-CM.txt
+    vendor/ridon/CHANGELOG.mkdn:system/etc/CHANGELOG-CM.txt
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/replicant/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
-    vendor/replicant/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
-    vendor/replicant/prebuilt/common/bin/50-cm.sh:system/addon.d/50-cm.sh \
-    vendor/replicant/prebuilt/common/bin/blacklist:system/addon.d/blacklist
+    vendor/ridon/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
+    vendor/ridon/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
+    vendor/ridon/prebuilt/common/bin/50-cm.sh:system/addon.d/50-cm.sh \
+    vendor/ridon/prebuilt/common/bin/blacklist:system/addon.d/blacklist
 
 # init.d support
 PRODUCT_COPY_FILES += \
-    vendor/replicant/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
-    vendor/replicant/prebuilt/common/bin/sysinit:system/bin/sysinit
+    vendor/ridon/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
+    vendor/ridon/prebuilt/common/bin/sysinit:system/bin/sysinit
 
 # userinit support
 PRODUCT_COPY_FILES += \
-    vendor/replicant/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
+    vendor/ridon/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
 
 # SELinux filesystem labels
 PRODUCT_COPY_FILES += \
-    vendor/replicant/prebuilt/common/etc/init.d/50selinuxrelabel:system/etc/init.d/50selinuxrelabel
+    vendor/ridon/prebuilt/common/etc/init.d/50selinuxrelabel:system/etc/init.d/50selinuxrelabel
 
 # CM-specific init file
 PRODUCT_COPY_FILES += \
-    vendor/replicant/prebuilt/common/etc/init.local.rc:root/init.cm.rc
+    vendor/ridon/prebuilt/common/etc/init.local.rc:root/init.cm.rc
 
 # Compcache/Zram support
 PRODUCT_COPY_FILES += \
-    vendor/replicant/prebuilt/common/bin/compcache:system/bin/compcache \
-    vendor/replicant/prebuilt/common/bin/handle_compcache:system/bin/handle_compcache
+    vendor/ridon/prebuilt/common/bin/compcache:system/bin/compcache \
+    vendor/ridon/prebuilt/common/bin/handle_compcache:system/bin/handle_compcache
 
 # Prebuilt apps
 PRODUCT_COPY_FILES +=  \
-    vendor/replicant/prebuilt/common/apps/FDroid.apk:system/app/FDroid.apk \
-    vendor/replicant/prebuilt/common/apps/Term.apk:system/app/Term.apk \
-    vendor/replicant/prebuilt/common/apps/lib/armeabi/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so
+    vendor/ridon/prebuilt/common/apps/FDroid.apk:system/app/FDroid.apk \
+    vendor/ridon/prebuilt/common/apps/Term.apk:system/app/Term.apk \
+    vendor/ridon/prebuilt/common/apps/lib/armeabi/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so
 
 # Bring in camera effects
 PRODUCT_COPY_FILES +=  \
-    vendor/replicant/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
-    vendor/replicant/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
+    vendor/ridon/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
+    vendor/ridon/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
@@ -83,14 +83,14 @@ PRODUCT_COPY_FILES += \
 
 # This is CM!
 PRODUCT_COPY_FILES += \
-    vendor/replicant/config/permissions/com.cyanogenmod.android.xml:system/etc/permissions/com.cyanogenmod.android.xml
+    vendor/ridon/config/permissions/com.cyanogenmod.android.xml:system/etc/permissions/com.cyanogenmod.android.xml
 
 # Don't export PS1 in /system/etc/mkshrc.
 PRODUCT_COPY_FILES += \
-    vendor/replicant/prebuilt/common/etc/mkshrc:system/etc/mkshrc
+    vendor/ridon/prebuilt/common/etc/mkshrc:system/etc/mkshrc
 
 # T-Mobile theme engine
-include vendor/replicant/config/themes_common.mk
+include vendor/ridon/config/themes_common.mk
 
 # Required CM packages
 PRODUCT_PACKAGES += \
@@ -114,7 +114,7 @@ PRODUCT_PACKAGES += \
     DSPManager \
     libcyanogen-dsp \
     audio_effects.conf \
-    ReplicantWallpapers \
+    ridonWallpapers \
     Apollo \
     CMFileManager \
     LockClock
@@ -154,28 +154,28 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     rsync
 
-PRODUCT_PACKAGE_OVERLAYS += vendor/replicant/overlay/dictionaries
-PRODUCT_PACKAGE_OVERLAYS += vendor/replicant/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/ridon/overlay/dictionaries
+PRODUCT_PACKAGE_OVERLAYS += vendor/ridon/overlay/common
 
 ifeq ($(USE_OPENGL_RENDERER),true)
-PRODUCT_PACKAGE_OVERLAYS += vendor/replicant/overlay/opengl
+PRODUCT_PACKAGE_OVERLAYS += vendor/ridon/overlay/opengl
 else
-BOARD_EGL_CFG := vendor/replicant/prebuilt/softwaregl/configs/egl.cfg
+BOARD_EGL_CFG := vendor/ridon/prebuilt/softwaregl/configs/egl.cfg
 
 PRODUCT_PROPERTY_OVERRIDES += ro.softwaregl=true
 
-PRODUCT_PACKAGE_OVERLAYS += vendor/replicant/overlay/softwaregl
+PRODUCT_PACKAGE_OVERLAYS += vendor/ridon/overlay/softwaregl
 endif
 
 PRODUCT_VERSION_MAJOR = 4
 PRODUCT_VERSION_MINOR = 2
 PRODUCT_VERSION_MAINTENANCE = 2
 
-REPLICANT_VERSION := "replicant-4.2"
+ridon_VERSION := "ridon-4.2"
 
 PRODUCT_PROPERTY_OVERRIDES += \
-  ro.cm.version=$(REPLICANT_VERSION) \
-  ro.modversion=$(REPLICANT_VERSION)
+  ro.cm.version=$(ridon_VERSION) \
+  ro.modversion=$(ridon_VERSION)
 
--include vendor/replicant/sepolicy/sepolicy.mk
+-include vendor/ridon/sepolicy/sepolicy.mk
 -include $(WORKSPACE)/hudson/image-auto-bits.mk
