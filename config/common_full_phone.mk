@@ -11,8 +11,8 @@ PRODUCT_PACKAGES += \
   Mms
 
 # BT config
-PRODUCT_COPY_FILES += \
-    system/bluetooth/data/main.conf:system/etc/bluetooth/main.conf
+#PRODUCT_COPY_FILES += \
+#    system/bluetooth/data/main.conf:system/etc/bluetooth/main.conf
 
 ifeq ($(TARGET_BOOTANIMATION_NAME),)
     PRODUCT_COPY_FILES += \
