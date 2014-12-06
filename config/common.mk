@@ -218,8 +218,8 @@ PRODUCT_PACKAGES += \
 
 # Terminal Emulator
 PRODUCT_COPY_FILES +=  \
-    vendor/ridon/proprietary/Term.apk:system/app/Term/Term.apk \
-    vendor/ridon/proprietary/lib/armeabi/libjackpal-androidterm4.so:system/app/Term/lib/arm/libjackpal-androidterm4.so
+    vendor/ridon/prebuilt/common/apps/Term.apk:system/app/Term/Term.apk \
+    vendor/ridon/prebuilt/common/apps/lib/armeabi/libjackpal-androidterm4.so:system/app/Term/lib/arm/libjackpal-androidterm4.so
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.root_access=1
@@ -232,7 +232,7 @@ endif
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/ridon/overlay/common
 
-PRODUCT_VERSION_MAJOR = 12
+PRODUCT_VERSION_MAJOR = 5 
 PRODUCT_VERSION_MINOR = 0
 PRODUCT_VERSION_MAINTENANCE = 0-RC0
 
