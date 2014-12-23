@@ -1,7 +1,8 @@
 FONT_PATH := vendor/ridon/prebuilt/fonts
 
 PRODUCT_COPY_FILES := \
-	vendor/ridon/overlay/common/frameworks/base/data/fonts/system_fonts.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/system_fonts.xml \
+	vendor/ridon/config/fonts/system_fonts.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/system_fonts.xml \
+	vendor/ridon/config/fonts/fonts.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/fonts.xml \
 	$(FONT_PATH)/OpenSans-BoldItalic.ttf:system/fonts/OpenSans-BoldItalic.ttf \
 	$(FONT_PATH)/OpenSans-Bold.ttf:system/fonts/OpenSans-Bold.ttf \
 	$(FONT_PATH)/OpenSans-CondBold.ttf:system/fonts/OpenSans-CondBold.ttf \
