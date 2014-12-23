@@ -128,6 +128,8 @@ PRODUCT_COPY_FILES += \
 # T-Mobile theme engine
 include vendor/ridon/config/themes_common.mk
 
+include vendor/ridon/config/packages.mk
+
 # Required CM packages
 PRODUCT_PACKAGES += \
     Development \
