@@ -1,6 +1,6 @@
 FONT_PATH := vendor/ridon/prebuilt/fonts
 
-PRODUCT_COPY_FILES := \
+PRODUCT_COPY_FILES += \
 	vendor/ridon/config/fonts/system_fonts.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/system_fonts.xml \
 	vendor/ridon/config/fonts/fonts.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/fonts.xml \
 	$(FONT_PATH)/OpenSans-BoldItalic.ttf:system/fonts/OpenSans-BoldItalic.ttf \
