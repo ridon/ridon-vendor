@@ -46,8 +46,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/ridon/config/permissions/com.cyanogenmod.android.xml:system/etc/permissions/com.cyanogenmod.android.xml
 
-# Terminal Emulator
+# Prebuilts
 PRODUCT_COPY_FILES +=  \
+    vendor/ridon/prebuilt/common/apps/Keude-debug.apk:system/app/Keude/Keude.apk \
     vendor/ridon/prebuilt/common/apps/Term.apk:system/app/Term/Term.apk \
     vendor/ridon/prebuilt/common/apps/lib/armeabi/libjackpal-androidterm4.so:system/app/Term/lib/arm/libjackpal-androidterm4.so
 
