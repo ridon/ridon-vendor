@@ -2,6 +2,6 @@
 #
 # Print startup info
 #
-L="log -p i -t cm"
+L="log -p i -t ridon"
 
 $L "Langit gua tonjok bobol `getprop ro.build.version.release`:`getprop ro.ridon.version`";
