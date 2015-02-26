@@ -18,9 +18,7 @@
 -->
 <resources>
 
-    <!-- Circle
     <integer name="def_battery_style">2</integer>
-    -->
 
     <!-- Right QS pulldown
     <integer name="def_qs_quick_pulldown">1</integer>
