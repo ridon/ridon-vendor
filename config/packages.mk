@@ -1,9 +1,10 @@
 
-# Required CM packages
 PRODUCT_PACKAGES += \
-    Development \
-    LatinIME \
-    BluetoothExt
+	ridon_ringtones \
+	ridon_alarms
+
+PRODUCT_PACKAGES += \
+    LatinIME 
 
 # Optional CM packages
 PRODUCT_PACKAGES += \
