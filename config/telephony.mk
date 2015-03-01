@@ -25,3 +25,7 @@ PRODUCT_PACKAGES += \
 # Default ringtone
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=ridon-tone.ogg
+
+# Default alarm
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.alarm_alert=good-old-times.ogg
