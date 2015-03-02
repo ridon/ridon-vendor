@@ -3,6 +3,10 @@ PRODUCT_PACKAGES += \
 	ridon_ringtones \
 	ridon_alarms
 
+# Indonesian ROOT-CA
+PRODUCT_PACKAGES += \
+	ridoncerts
+
 PRODUCT_PACKAGES += \
     LatinIME 
 
